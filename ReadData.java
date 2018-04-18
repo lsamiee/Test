@@ -18,12 +18,11 @@ public static void main(String args[]) throws Exception{
   char [][] mapText = new char[mapSide][mapSide];
   while (myFileScanner.hasNextLine()) {
     String currentline = myFileScanner.nextLine();
-    for (int i = 0; i < currentLine.length; i++) {
-      mapText[mapSide][i] = myFileScanner.toCharArray();
-    }
+    mapText[i] = myFileScanner.toCharArray();
+  }
   lineCount++;
  }                                 
- return matrix;
+ return mapText;
 }
   // if Trap is in mapText[x][y]
   // xPosition of the trap = trapPositions[0][trapCounter]
