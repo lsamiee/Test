@@ -16,26 +16,11 @@ public class ReadData {
 //while there are still traps on the map
   
 public static void main(String args[]) throws Exception {
+try { 
+  //put it here 
   
-  File map = new java.io.File(args[1]);
-  Scanner myFileScanner = new Scanner(map);
-  int mapSide = 0;
-  mapSide = myFileScanner.nextLine().length();
-  char [][] mapText = new char[mapSide][mapSide];
   
-  int linecounter = 1;
-  while (myFileScanner.hasNextLine()) {
-    String currentline = myFileScanner.nextLine();
-    mapText[linecounter++] = myFileScanner.toCharArray();
-  }
- for (int i = 0; i < mapSide; i++);
- {
-   for int j = 0, j < mapSide; j++
-   {
-     System.out.print(mapText[i][j]);
-   }
-   System.out.print("\\n");
- }
+  
   // if Trap is in mapText[x][y]
   // xPosition of the trap = trapPositions[0][trapCounter]
   // yPosition of the trap = trapPositions[1][trapCounter]
@@ -51,16 +36,15 @@ public static void main(String args[]) throws Exception {
   //x is column, y is row
   //mark the path in the maze via symbol 'S'
   //if x = < 0, or y < 0 or x or y > mapSide (out of bounds) return false
-  if ((x < 0) || (y < 0) || (x > mapSide) || (y > mapSide) {
-    return false;
-  }
-      
-  //if value of mapText[x][y] == '+' || '-' || '|' (obstacle) return false
-  if (mapText[x][y] == '|' || mapText[x][y] == '+' || mapText[x][y] == '-'){
-   return false;
-  }
-  //if value of mapText[x][y] == 'G' return true got to the goal
-  if (mapText[x][y] == 'G') {
+    if ((x < 0) || (y < 0) || (x > mapSide) || (y > mapSide) {
+      return false;
+    }
+    if (mapText[x][y] == '|' || mapText[x][y] == '+' || mapText[x][y] == '-'){
+      return false;
+    }
+    //if value of mapText[x][y] == '+' || '-' || '|' (obstacle) return false
+    //if value of mapText[x][y] == 'G' return true got to the goal
+    if (mapText[x][y] == 'G') {
    return true;
   }
   //once conditions are fullfiled, mapText[x][y] = 'S' any Potential Trap is considered a possible path
@@ -75,5 +59,8 @@ public static void main(String args[]) throws Exception {
 
   
   }
+      } catch (Exception e) {
+        System.out.println("Exception occurred");
+      }
  }
 }
