@@ -10,20 +10,19 @@ import java.io.IOException;
 
 public class ReadData {
 
-public static void main(String args[]) throws Exception{
+public static void main(String args[]) throws Exception {
+  
   File map = new java.io.File(args[1]);
   Scanner myFileScanner = new Scanner(map);
   int mapSide = 0;
   mapSide = myFileScanner.nextLine().length();
   char [][] mapText = new char[mapSide][mapSide];
+  
   while (myFileScanner.hasNextLine()) {
     String currentline = myFileScanner.nextLine();
     mapText[i] = myFileScanner.toCharArray();
   }
-  lineCount++;
- }                                 
- return mapText;
-}
+                         
   // if Trap is in mapText[x][y]
   // xPosition of the trap = trapPositions[0][trapCounter]
   // yPosition of the trap = trapPositions[1][trapCounter]
