@@ -17,10 +17,39 @@ public class ReadData {
   
 public static void main(String args[]) throws Exception {
 try { 
-  //put it here 
+//File map = new java.io.File(args[1]);
+  File map = new java.io.File("map1.txt");
+  Scanner myFileScanner = new Scanner(map);
+
+  int mapSide = 0;
+  String currentLine;
   
-  
-  
+  currentLine = myFileScanner.nextLine();
+  mapSide = currentLine.length();
+  char [][] mapText = new char[mapSide][mapSide];
+  mapText[0] = currentLine.toCharArray();
+  System.out.println("currentline at 0 is " +  currentLine);
+  int linecounter = 1;
+
+  while (myFileScanner.hasNextLine()) {
+    currentLine = myFileScanner.nextLine();
+    System.out.println("currentline at " + linecounter + " is " +  currentLine);
+    mapText[linecounter] = currentLine.toCharArray();
+    for (int i = 0; i < mapSide; i++) {
+      System.out.println("mapText at " + linecounter + " and " + i + " is " +  mapText[linecounter][i]);
+    }
+    linecounter++;
+  }
+   System.out.print("Done filling the Array \n");
+ // make sure our array is correct;  
+ for (int i = 0; i < mapSide; i++)
+ {
+   for (int j = 0; j < mapSide; j++)
+   {
+     System.out.print(mapText[i][j]);
+   }
+   System.out.print("\n");
+ } 
   // if Trap is in mapText[x][y]
   // xPosition of the trap = trapPositions[0][trapCounter]
   // yPosition of the trap = trapPositions[1][trapCounter]
