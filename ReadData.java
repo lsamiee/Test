@@ -11,7 +11,7 @@ import java.io.IOException;
 public class ReadData {
 
 public static void main(String args[]) throws Exception{
-  File map = new java.io.File("map1.txt");
+  File map = new java.io.File(args[1]);
   Scanner myFileScanner = new Scanner(map);
   int mapSide = 0;
   mapSide = myFileScanner.nextLine().length();
