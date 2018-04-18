@@ -61,7 +61,7 @@ try {
 } // main 
 
    
-public boolean solveMaze (char[][] mapChar) 
+public boolean solveMaze (char[][] mapChar, int trapCounter, char [][] trapPositions) 
 {
     //assuming all maps are square
     //' ' is where the monster can move
