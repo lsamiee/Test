@@ -42,10 +42,8 @@ try {
   }
    System.out.print("Done filling the Array \n");
  // make sure our array is correct;  
- for (int i = 0; i < mapSide; i++)
- {
-   for (int j = 0; j < mapSide; j++)
-   {
+ for (int i = 0; i < mapSide; i++) {
+   for (int j = 0; j < mapSide; j++) {
      System.out.print(mapText[i][j]);
    }
    System.out.print("\n");
@@ -57,12 +55,12 @@ try {
   public int trapCounter = -1;
   
  // method Solve
- solveMaze(
-        
  } catch (Exception e) {
     System.out.println("Exception occurred");
  } // catch 
 } // main 
+
+   
 public boolean solveMaze (char[][] mapChar) 
 {
     //assuming all maps are square
