@@ -28,7 +28,14 @@ public static void main(String args[]) throws Exception {
     String currentline = myFileScanner.nextLine();
     mapText[linecounter++] = myFileScanner.toCharArray();
   }
-                         
+ for (int i = 0; i < mapSide; i++);
+ {
+   for int j = 0, j < mapSide; j++
+   {
+     System.out.print(mapText[i][j]);
+   }
+   System.out.print("\\n");
+ }
   // if Trap is in mapText[x][y]
   // xPosition of the trap = trapPositions[0][trapCounter]
   // yPosition of the trap = trapPositions[1][trapCounter]
